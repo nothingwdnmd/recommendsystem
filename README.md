@@ -23,11 +23,6 @@ matplotlib
 pygame
 pyserial
 mne
-安装步骤
-克隆或下载本项目到本地
-plaintext
-git clone https://github.com/yourusername/attention-training-ball.git
-cd attention-training-ball
 
 安装依赖库
 plaintext
