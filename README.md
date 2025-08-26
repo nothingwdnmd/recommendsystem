@@ -1,36 +1,75 @@
-# mi_app
+注意力训练小球移动项目
+项目简介
+这是一个基于 FP1 和 FP2 脑电信号的注意力训练应用，通过检测用户的注意力水平来控制屏幕上小球的移动。该项目结合了脑机接口技术与游戏化训练，为用户提供一种有趣且有效的注意力训练方式。
+功能特点
+实时接收 FP1 和 FP2 通道的脑电信号
+分析处理脑电数据，提取注意力相关特征
+根据注意力水平控制小球在屏幕上的移动
+提供多种训练模式和难度级别
+记录训练数据和进步情况
+可视化展示注意力变化曲线
+硬件要求
+支持 FP1 和 FP2 通道的脑电采集设备
+USB 接口（用于连接脑电设备）
+最低配置：Intel Core i3 处理器，4GB 内存，支持 OpenGL 3.0 的显卡
+推荐配置：Intel Core i5 处理器，8GB 内存，独立显卡
+软件环境
+操作系统：Windows 10/11 或 macOS 10.15+
+Python 3.8+
+所需 Python 库：
+numpy
+pandas
+matplotlib
+pygame
+pyserial
+mne
+安装步骤
+克隆或下载本项目到本地
+plaintext
+git clone https://github.com/yourusername/attention-training-ball.git
+cd attention-training-ball
 
-#### 介绍
-project for custom bci
+安装依赖库
+plaintext
+pip install -r requirements.txt
 
-#### 软件架构
-![Image text](images/software_architecture.png)
+连接脑电设备并确保驱动已正确安装
+运行主程序
+plaintext
+python main.py
 
-#### 安装教程
+使用方法
+启动程序后，首先确保脑电设备已正确连接并被程序识别
+佩戴好脑电电极，确保 FP1 和 FP2 位置接触良好
+选择训练模式和难度级别
+点击 "开始训练" 按钮开始注意力训练
+集中注意力时，小球会按照预设方向移动
+训练结束后，可以查看本次训练数据和分析报告
+配置说明
+程序配置文件位于config.ini，可根据需要修改以下参数：
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+端口设置：修改脑电设备连接的 COM 端口
+信号处理：调整注意力阈值和响应灵敏度
+游戏设置：修改小球移动速度和训练时间
+显示设置：调整界面布局和数据可视化方式
+数据记录
+训练数据会自动保存在data/目录下，包括：
 
-#### 使用说明
+每次训练的原始脑电数据（.edf 格式）
+注意力值变化曲线（.png 格式）
+训练结果统计（.csv 格式）
+注意事项
+使用前请确保电极位置正确，接触良好
+训练环境应保持安静，减少外界干扰
+初次使用可能需要几分钟适应时间
+如出现信号质量差的情况，请检查电极接触和设备连接
+建议每次训练时间不超过 20 分钟，避免疲劳
+开发与贡献
+欢迎对本项目进行改进和扩展，如有任何问题或建议，请提交 issue 或 pull request。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+主要可扩展方向：
 
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+增加更多训练游戏模式
+优化注意力检测算法
+支持更多类型的脑电设备
+增加多人对战功能
